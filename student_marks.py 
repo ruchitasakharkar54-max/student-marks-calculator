@@ -1,0 +1,32 @@
+print("===== STUDENT MARKS CALCULATOR =====")
+
+name = input("Enter student name: ")
+
+english = float(input("English marks: "))
+maths = float(input("Maths marks: "))
+science = float(input("Science marks: "))
+computer = float(input("Computer marks: "))
+biology = float(input("Biology marks: "))
+
+total = english + maths + science + computer + biology
+percentage = total / 5
+
+print("\n===== RESULT =====")
+print("Name:", name)
+print("Total:", total, "/ 500")
+print("Percentage:", percentage, "%")
+
+if min(english, maths, science, computer, biology) < 35:
+    print("Result: FAIL")
+elif percentage >= 90:
+    print("Grade: A+")
+    print("Result: PASS")
+elif percentage >= 75:
+    print("Grade: A")
+    print("Result: PASS")
+elif percentage >= 60:
+    print("Grade: B")
+    print("Result: PASS")
+else:
+    print("Grade: C")
+    print("Result: PASS")
